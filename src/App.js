@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import {Container} from '@mui/material';
+import SideBar from './components/SideBar';
+import { ThemeProvider, styled } from '@mui/material/styles';
+import { theme } from './theme/theme';
+import LoginPage from './components/LoginPage';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+       <Container 
+        maxWidth="100%" 
+        disableGutters={true} 
+        sx={{
+          display:'inline-flex',
+          flexWrap:'wrap',
+          gap:'10px', 
+          padding:'30px',
+          backgroundImage:theme.palette.primary.gradient
+        }}>
+        <SideBar/>
+        <LoginPage/>
+      </Container>
+    </ThemeProvider>
   );
 }
 
