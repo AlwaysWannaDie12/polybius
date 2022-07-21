@@ -4,13 +4,13 @@ import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import {useState} from 'react';
 import {theme} from '../theme/theme';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import GroupsIcon from '@mui/icons-material/Groups';
-import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
-import EventIcon from '@mui/icons-material/Event';
-import CastForEducationIcon from '@mui/icons-material/CastForEducation';
+import AppsIcon from '@mui/icons-material/Apps';
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import BallotIcon from '@mui/icons-material/Ballot';
+import PolylineIcon from '@mui/icons-material/Polyline';
 import BackupTableIcon from '@mui/icons-material/BackupTable';
-import ChatIcon from '@mui/icons-material/Chat';
-import AddIcon from '@mui/icons-material/Add';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { useSpring, animated,config } from 'react-spring';
 
 function SideBar() {
@@ -36,7 +36,7 @@ function SideBar() {
     const AnimatedPaper = animated(Paper);
 
     const StyledBar = styled(AnimatedPaper)(({theme}) => ({
-        height:'100%',
+        height:'90%',
         padding:'30px',
         backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,0,0.2), rgba(255,255,255,0))',
         backgroundColor:'rgba(0,0,0,0.5)',
@@ -125,7 +125,7 @@ function SideBar() {
         <Grid container spacing={0} component={NavButton} disableRipple>
             <Grid item xs={3}>
                 <StyledAvatar>
-                    <GroupsIcon/>
+                    <AppsIcon/>
                 </StyledAvatar>
             </Grid>
             {sliderOpen?
@@ -140,7 +140,7 @@ function SideBar() {
         <Grid container spacing={0} component={NavButton} disableRipple>
             <Grid item xs={3}>
                 <StyledAvatar>
-                    <SupervisorAccountIcon/>
+                    <CheckBoxOutlineBlankIcon/>
                 </StyledAvatar>
             </Grid>
             {sliderOpen?
@@ -155,7 +155,7 @@ function SideBar() {
         <Grid container spacing={0} component={NavButton} disableRipple>
             <Grid item xs={3}>
                 <StyledAvatar>
-                    <EventIcon/>
+                    <BallotIcon/>
                 </StyledAvatar>
             </Grid>
             {sliderOpen?
@@ -170,7 +170,7 @@ function SideBar() {
         <Grid container spacing={0} component={NavButton} disableRipple>
             <Grid item xs={3}>
                 <StyledAvatar>
-                    <CastForEducationIcon/>
+                    <PolylineIcon/>
                 </StyledAvatar>
             </Grid>
             {sliderOpen?
@@ -191,7 +191,7 @@ function SideBar() {
             {sliderOpen?
                 <Grid item xs={6}>
                 <Typography variant='subtitle2'  sx={{textTransform:'none'}}>
-                    Sodoku
+                    Sudoku
                 </Typography>
             </Grid>
             :''}
@@ -200,7 +200,7 @@ function SideBar() {
         <Grid container spacing={0} component={NavButton} disableRipple>
             <Grid item xs={3}>
                 <StyledAvatar>
-                    <ChatIcon/>
+                    <FormatQuoteIcon/>
                 </StyledAvatar>
             </Grid>
             {sliderOpen?
@@ -215,17 +215,26 @@ function SideBar() {
         <Divider/>
         {<br/>}
         {sliderOpen?
-            <Box sx={{borderStyle:'dotted', borderRadius:'10px',padding:'10px',display:'grid',textAlign:'center'}}>
-            <StyledAvatar sx={{marginLeft:'65px'}}>
-                <AddIcon/>
+            <Box sx={{
+                    borderRadius:'10px',
+                    padding:'10px',
+                    display:'flex-box',
+                    justifyContent:'center',
+                    textAlign:'center',
+                    backgroundImage: 'linear-gradient(to bottom right, rgba(0,0,0,0.2), rgba(255,255,255,0))',
+                    backgroundColor:'rgba(0,0,0,0.2)',
+                    backdropFilter:"blur(10px)"
+                    }}>
+            <StyledAvatar sx={{width:'100%',selfAlign:'center'}}>
+                <SportsEsportsIcon/>
             </StyledAvatar>
             <Typography variant='subtitle2'  sx={{textTransform:'none', textAlign:'center'}}>
-                    Upload new Class
-                </Typography>
+                    Polybius
+            </Typography>
         </Box>
         :
         <StyledAvatar>
-            <AddIcon />
+            <SportsEsportsIcon />
         </StyledAvatar>  
         }
         

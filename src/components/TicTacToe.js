@@ -1,6 +1,7 @@
-import {Grid, Input, Paper, Typography} from '@mui/material';
+import {Grid, Input, Paper, Typography,Box} from '@mui/material';
 import { ThemeProvider, styled } from '@mui/material/styles';
-
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import MinimizeRoundedIcon from '@mui/icons-material/MinimizeRounded';
 
 const Page = styled(Paper)(({theme}) => ({
     height:'90%',
@@ -18,32 +19,21 @@ const Page = styled(Paper)(({theme}) => ({
     textAlign:'center'
 }))
 
-function LoginPage() {
+function TicTacToe() {
   return (
     <Page>
         <Grid container spacing={3}>
             <Grid item xs={12}>
-                <Typography variant="h5">
-                    Login
-                </Typography>
+                <CloseRoundedIcon sx={{width:'26px', height:'26px'}}/>
+                <MinimizeRoundedIcon/>
+                <Box sx={{color:'white', borderRadius:'20px'}}/>
             </Grid>
             <Grid item xs={12}>
-                <Typography variant="body">
-                    Username:
-                </Typography>
-                <Input>
-                </Input>
-            </Grid>
-            <Grid item xs={12}>
-                <Typography variant="body">
-                    Password:
-                </Typography>
-                <Input>
-                </Input>
+               
             </Grid>
         </Grid>
     </Page>
   )
 }
 
-export default LoginPage
+export default TicTacToe

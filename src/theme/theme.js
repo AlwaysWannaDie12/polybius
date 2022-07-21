@@ -159,7 +159,7 @@ export const theme = createTheme({
       lineHeight: 1.75
     },
     subtitle2: {
-      fontSize: '0.800rem',
+      fontSize: '1rem',
       fontWeight: 200,
       lineHeight: 1.57,
       letterSpacing: '1px',
