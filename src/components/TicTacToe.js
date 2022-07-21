@@ -2,6 +2,7 @@ import {Grid, Input, Paper, Typography,Box} from '@mui/material';
 import { ThemeProvider, styled } from '@mui/material/styles';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import MinimizeRoundedIcon from '@mui/icons-material/MinimizeRounded';
+import Brightness1RoundedIcon from '@mui/icons-material/Brightness1Rounded';
 
 const Page = styled(Paper)(({theme}) => ({
     height:'90%',
@@ -23,10 +24,10 @@ function TicTacToe() {
   return (
     <Page>
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid item xs={12} sx={{alignItems:'flex-end'}}>
                 <CloseRoundedIcon sx={{width:'26px', height:'26px'}}/>
-                <MinimizeRoundedIcon/>
-                <Box sx={{color:'white', borderRadius:'20px'}}/>
+                <MinimizeRoundedIcon sx={{width:'26px', height:'26px', marginBottom:'8px'}}/>
+                <Brightness1RoundedIcon sx={{width:'26px', height:'26px'}}/>
             </Grid>
             <Grid item xs={12}>
                
